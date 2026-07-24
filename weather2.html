@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="weather2.js" defer></script>
+</head>
+<body>
+    <nav>
+        <h1>Weather App</h1>
+        <div class="navbar">
+            <button id="Sign-in" onclick="window.location.href='signin.html'"><i class="fa-solid fa-user"></i>Sign In</button>
+            <input type="text" id="city-input" placeholder="Enter the location" required>
+            <button id="location-btn"><i class="fa-solid fa-location-crosshairs"></i>Use My Location</button>
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i>Search Weather</button>
+        </div>
+        <p class="message" id="message"></p>
+    </nav>
+
+    <main class="page-layout">
+        <aside class="side-bar">
+            <section class="location-card">
+                <h2>Location</h2>
+                <p id="location-name">Enter a city to view weather</p>
+                <p id="local-time">Local time: --:--</p>
+            </section>
+
+            <section class="weather-stats">
+                <h2>Details</h2>
+                <ul>
+                    <li>Feels like: <span id="feels-like">--</span></li>
+                    <li>Humidity: <span id="humidity">--</span></li>
+                    <li>Wind speed: <span id="wind-speed">--</span></li>
+                    <li>Pressure: <span id="pressure">--</span></li>
+                </ul>
+            </section>
+        </aside>
+
+        <section class="weather-panel">
+            <div class="weather-container">
+                <div class="weather-card current-weather">
+                    <div class="weather-header">
+                        <div class="weather-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                        <div class="weather-summary">
+                            <p class="temperature" id="temperature">--°C</p>
+                            <p class="description" id="weather-description">Search for a location to begin</p>
+                        </div>
+                    </div>
+
+                    <div class="forecast-details">
+                        <p>Sunrise: <span id="sunrise">--</span></p>
+                        <p>Sunset: <span id="sunset">--</span></p>
+                        <p>Chance of rain: <span id="rain-chance">--</span></p>
+                    </div>
+                </div>
+                <div class="forecast-grid" id="forecast-grid"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
